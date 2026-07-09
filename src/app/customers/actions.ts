@@ -35,6 +35,7 @@ function readCustomerForm(formData: FormData) {
     company: optional("company"),
     email: optional("email"),
     phone: optional("phone"),
+    postalCode: optional("postalCode"),
     address: optional("address"),
     memo: optional("memo"),
     startDate: optionalDate("startDate"),
@@ -60,9 +61,4 @@ export async function updateCustomer(id: number, formData: FormData) {
   redirect(`/customers/${id}`);
 }
 
-export async function deleteCustomer(id: number) {
-  await requireUser();
-  await prisma.customer.delete({ where: { id } });
-  revalidatePath("/customers");
-  redirect("/customers");
-}
+export async function deleteCustomer(id: number)
