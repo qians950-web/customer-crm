@@ -33,6 +33,7 @@ model Customer {
   company     String?
   email       String?
   phone       String?
+  postalCode  String?
   address     String?
   memo        String?
   startDate   DateTime?
