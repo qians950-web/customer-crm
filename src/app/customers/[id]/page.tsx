@@ -30,6 +30,7 @@ export default async function CustomerDetailPage({
     { label: "会社名", value: customer.company },
     { label: "メールアドレス", value: customer.email },
     { label: "電話番号", value: customer.phone },
+    { label: "郵便番号", value: customer.postalCode },
     { label: "住所", value: customer.address },
     {
       label: "依頼内容",
